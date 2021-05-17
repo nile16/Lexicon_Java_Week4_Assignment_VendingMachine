@@ -6,7 +6,7 @@ import java.util.List;
 public class LexiconVending implements VendingMachine {
 
     private int deposit;
-    private List<Product> products; //Array or List???
+    private List<Product> products;
 
     private enum Denominations {
         ONE(1), TWO(2), FIVE(5), TEN(10), TWENTY(20), FIFTY(50), HUNDRED(100), TWOHUNDRED(200), FIVEHUNDRED(500), THOUSAND(1000);
@@ -26,7 +26,9 @@ public class LexiconVending implements VendingMachine {
         this.products = new ArrayList<>();
         this.deposit = 0;
 
-        this.products.add(new Fruit("Apple", 12));
+        this.products.add(new Fruit("Apple", 12, 70));
+        this.products.add(new Food("Sandwich", 20, 200));
+        this.products.add(new Drink("Milk", 10, 150));
     }
 
     @Override
@@ -39,7 +41,7 @@ public class LexiconVending implements VendingMachine {
     }
 
     @Override
-    public Product request(int productNumber) {   // Remove product?
+    public Product request(int productNumber) {
         if (products.get(productNumber).price <= deposit) {
             deposit -= products.get(productNumber).price;
             return products.get(productNumber);

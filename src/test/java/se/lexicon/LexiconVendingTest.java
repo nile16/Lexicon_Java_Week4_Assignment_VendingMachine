@@ -42,7 +42,7 @@ public class LexiconVendingTest {
 
         //Assert
         result2 = vend.getBalance();
-        Assert.assertEquals("Name: Apple, Price: 12", purchase1.examine());
+        Assert.assertEquals("Apple, Price: 12, Kcal: 70", purchase1.examine());
         Assert.assertNull(purchase2);
         Assert.assertEquals(8, result2);
     }
@@ -73,7 +73,7 @@ public class LexiconVendingTest {
         result = vend.getDescription(0);
 
         //Assert
-        Assert.assertEquals("Name: Apple, Price: 12", result);
+        Assert.assertEquals("Apple, Price: 12, Kcal: 70", result);
     }
 
     @Test
@@ -101,6 +101,6 @@ public class LexiconVendingTest {
         result = vend.getProducts();
 
         //Assert
-        Assert.assertEquals("0. Name: Apple, Price: 12", result[0]);
+        Assert.assertEquals("0. Apple, Price: 12, Kcal: 70", result[0]);
     }
 }

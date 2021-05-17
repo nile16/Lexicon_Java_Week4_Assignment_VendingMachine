@@ -8,20 +8,20 @@ public class FruitTest {
     @Test
     public void examine() {
         //Arrange
-        Fruit fruit = new Fruit("Apple", 12);
+        Fruit fruit = new Fruit("Apple", 12, 70);
         String result;
 
         //Act
         result = fruit.examine();
 
         //Assert
-        Assert.assertEquals("Name: Apple, Price: 12", result);
+        Assert.assertEquals("Apple, Price: 12, Kcal: 70", result);
     }
 
     @Test
     public void use() {
         //Arrange
-        Fruit fruit = new Fruit("Apple", 12);
+        Fruit fruit = new Fruit("Apple", 12, 70);
         String result;
 
         //Act
