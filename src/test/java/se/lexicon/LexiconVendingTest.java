@@ -34,6 +34,7 @@ public class LexiconVendingTest {
         LexiconVending vend = new LexiconVending();
         int result1, result2;
         Product purchase1, purchase2;
+
         vend.addCurrency(20);
 
         //Act
@@ -52,6 +53,7 @@ public class LexiconVendingTest {
         //Arrange
         LexiconVending vend = new LexiconVending();
         int result1, result2;
+
         vend.addCurrency(5);
 
         //Act
@@ -102,5 +104,7 @@ public class LexiconVendingTest {
 
         //Assert
         Assert.assertEquals("0. Apple, Price: 12, Kcal: 70", result[0]);
+        Assert.assertEquals("1. Sandwich, Price: 20, Kcal: 200", result[1]);
+        Assert.assertEquals("2. Milk, Price: 10, Kcal: 150", result[2]);
     }
 }
